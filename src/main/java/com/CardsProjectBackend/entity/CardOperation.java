@@ -1,5 +1,7 @@
 package com.CardsProjectBackend.entity;
 
+
+
 import javax.persistence.*;
 
 
@@ -22,19 +24,19 @@ public class CardOperation {
         private int id;
 
         @Column(name="sender_amount")
-        private float senderAmount;
+		private long senderAmount;
 
         @Column(name="receiver_number")
         private String receiverNumber;
 
         @Column(name="receiver_amount")
-        private float receiverAmount;
+        private long receiverAmount;
 
         @Column(name="sender_fee")
-        private float senderFee;
+        private long senderFee;
 
         @Column(name="receiver_fee")
-        private float receiverFee;
+        private long receiverFee;
 
         @Column(name="phone")
         private long phone;
@@ -47,8 +49,8 @@ public class CardOperation {
 
         public CardOperation() {
         }
-        public CardOperation(String senderNumber, long senderDate, long senderCvc2, float senderAmount,
-                             String receiverNumber, float receiverAmount, float senderFee, float receiverFee,
+        public CardOperation(String senderNumber, long senderDate, long senderCvc2, long senderAmount,
+                             String receiverNumber, long receiverAmount, long senderFee, long receiverFee,
                              long phone, boolean receiverNotification, boolean email) {
             this.senderNumber = senderNumber;
             this.senderDate = senderDate;
@@ -90,10 +92,10 @@ public class CardOperation {
             this.id = id;
         }
 
-        public float getSenderAmount() {
+        public long getSenderAmount() {
             return senderAmount;
         }
-        public void setSenderAmount(float senderAmount) {
+        public void setSenderAmount(long senderAmount) {
             this.senderAmount = senderAmount;
         }
 
@@ -107,21 +109,21 @@ public class CardOperation {
         public float getReceiverAmount() {
             return receiverAmount;
         }
-        public void setReceiverAmount(float receiverAmount) {
+        public void setReceiverAmount(long receiverAmount) {
             this.receiverAmount = receiverAmount;
         }
 
-        public float getSenderFee() {
+        public long getSenderFee() {
             return senderFee;
         }
-        public void setSenderFee(float senderFee) {
+        public void setSenderFee(long senderFee) {
             this.senderFee = senderFee;
         }
 
-        public float getReceiverFee() {
+        public long getReceiverFee() {
             return receiverFee;
         }
-        public void setReceiverFee(float receiverFee) {
+        public void setReceiverFee(long receiverFee) {
             this.receiverFee = receiverFee;
         }
 
